@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+
+    height: 100vh ;
+    width: 100vw ;
+    background-color: black;
+}
+
+body {
+
+    background-image: url(../imagens/fundo-madeira.jpg);
+    background-repeat: no-repeat top center;
+    background-size: cover; /* cobre a tela inteira */
+    background-attachment: fixed; /* evitar rolagem */ 
+
+}
+
+main {
+    position: relative;
+    height: 100vh;
+  
+
+}
+
+section#telefone {
+
+    position: absolute;  /* com posição absoluta podemos mover esse objeto( com top e left)*/
+    top: 50%;
+    left: 50%;
+    /* usando top e left ele vai usar como meio do bloco a ponta superior esquerda do bloco, por isso a necessidade da tag transform */
+    transform:translate(-50%, -50%); /* para tudo isso funcionar o main tem que ter position relative*/ 
+    width: 311px;;
+    height: 627px;
+    background-image:  url(../imagens/frame-iphone.png); 
+    background-repeat: no-repeat;
+}
+
+iframe#tela {
+
+    position: relative;
+    top:80px ;
+    left:22px ;
+    width: 257px; ;
+    height:471px ;
+}
+
+section#redes-sociais {
+
+    text-align: right;
+
+    }
+
+section#redes-sociais img {
+    width: 50px;
+    margin: 10px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.336);
+    box-sizing: border-box; /* borda esta fazendo parte da caixa, isso para funcionar o hover nos botoes de maneira mais adequada*/
+}
+
+section#redes-sociais img:hover {
+
+    border: 2px solid rgba(255, 255, 255, 0.384);
+    transform: translate(-3px, -3px);
+    box-shadow: 5px, 5px, 10px rgba(0, 0, 0, 0.267);
+    transition: transform .5s, border 1s; /* tempo da movimentação*/
+}
